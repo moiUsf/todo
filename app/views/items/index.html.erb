@@ -11,7 +11,8 @@
 
         <div class="col-md-6">
           <h2><s><%= link_to item.title, item %></s></h2>
-          <p><%= item.completed_at %></p>
+          <%# <p><%= item.completed_at %></p> 
+
           <p><%= time_ago_in_words(item.completed_at) %></p>
         </div>
 

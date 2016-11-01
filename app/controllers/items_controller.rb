@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @items = Item.all.order("created_at DESC") #Item.find(:all, :conditions => {:user_id => session[:user_id]})   
+    @items = current_user.items    
   end
 
   def new

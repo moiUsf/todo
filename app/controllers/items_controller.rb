@@ -3,7 +3,8 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @items = current_user.items    
+    @items =  current_user.items.paginate(:page => params[:page], :per_page => 1)
+                    #
   end
 
   def new

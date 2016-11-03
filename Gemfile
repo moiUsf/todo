@@ -35,6 +35,12 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+
 
 
 group :development, :test do

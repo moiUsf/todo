@@ -40,6 +40,17 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+gem 'cancan' # or cancancan
+gem 'draper', github: 'audionerd/draper', branch: 'rails5'
+gem 'pundit'
+
+gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
+
+gem 'guard', '~> 2.13'
+
 
 
 

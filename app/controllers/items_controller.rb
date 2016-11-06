@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 
   def index
     @items =  current_user.items.paginate(:page => params[:page], :per_page => 1)
-                    #
+                    
   end
 
   def new
@@ -33,6 +33,7 @@ class ItemsController < ApplicationController
   def update
     if @item.update(item_params)
       redirect_to items_path(@item)
+      ItemMailer.item_edit_confirm(current_user).deliver
 
     else
       render 'edit'

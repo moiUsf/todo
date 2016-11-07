@@ -31,9 +31,13 @@ class ItemsController < ApplicationController
   end
 
   def update
+
+
     if @item.update(item_params)
       redirect_to items_path(@item)
-      ItemMailer.item_edit_confirm(current_user).deliver
+    
+      ItemMailer.item_edit_confirm(current_user, @item).deliver
+
 
     else
       render 'edit'

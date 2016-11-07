@@ -7,8 +7,9 @@ class ItemMailer < ApplicationMailer
   #
   #   en.item_mailer.item_edit_confirm.subject
   #
-  def item_edit_confirm(user)
+  def item_edit_confirm(user, item)
 	@user = user
+	@item = item
     mail to: @user.email, subject: "ToDo Thank u for editing Item bla bla ;-)"
   end
 end
